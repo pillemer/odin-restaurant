@@ -16,11 +16,6 @@ function plates() {
         const price = plateLibrary[i].price;
         plateDiv.id = plateLibrary[i].name;
         plateDiv.innerHTML = `${plateLibrary[i].description}. <span>${price} </span>`;
-        plateDiv.style.fontSize = '50px';
-        plateDiv.style.borderWidth = '3px';
-        plateDiv.style.borderStyle = 'solid';
-        plateDiv.style.width = '100%';
-        plateDiv.style.height = '5em';
         const img = document.createElement('img');
         img.src = plateLibrary[i].src
         plateDiv.appendChild(img);

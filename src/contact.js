@@ -2,12 +2,63 @@ import homepage from'./homepage';
 import about from'./about';
 import plates from'./plates';
 
+
+function createTable() {
+    const openingHours = [
+        ['Day', 'Hours'],
+        ['Monday',      "10:00 - 18:00"],
+        ['Tuesady',     "10:00 - 18:00"],
+        ['Wednesday',   "10:00 - 18:00"],
+        ['Thursday',    "10:00 - 18:00"],
+        ['Friday',      "10:00 - 22:00"],
+        ['Saturday',    "Closed"],
+        ['Sunday',      "Closed"],
+    ]
+    const table = document.createElement('table');
+
+    // create table headers
+    const headerRow = document.createElement('tr');
+    const dayHeader = document.createElement('th')
+    const timeHeader = document.createElement('th')
+    dayHeader.textContent = openingHours[0][0];
+    timeHeader.textContent = openingHours[0][1];
+    headerRow.appendChild(dayHeader);
+    headerRow.appendChild(timeHeader);
+    table.appendChild(headerRow);
+
+    // create table cells
+    for (let i = 1; i < openingHours.length; i++) {
+        const tableRow = document.createElement('tr');
+        const day = document.createElement('td');
+        const time = document.createElement('td')
+        day.textContent = openingHours[i][0];
+        time.textContent = openingHours[i][1];
+        tableRow.appendChild(day);
+        tableRow.appendChild(time);
+        table.appendChild(tableRow)
+    }
+    return table
+}
+
+
 function contact () {
     const content = document.querySelector('#content');
     content.innerHTML = '';
     navbarAndLogo();
-    // create a div with contact info and opening times and append to content
-    console.log('This is contact page');
+    // contact header
+    const contactLogo = document.createElement('header');
+    contactLogo.id = 'contactTitle';
+    contactLogo.textContent = 'CONTACT';
+    content.appendChild(contactLogo);
+    // opening hours table 
+    const openHours = createTable();
+    openHours.id = 'OpeningTimes';
+    content.appendChild(openHours);
+    // address div
+    const address = document.createElement('address')
+    address.id = 'address'
+    address.textContent = '30 Rue de la Belle Sauvage, Yosemite, Singapore, 4ED 3SG'
+    content.appendChild(address)
 }
 
 function navbarAndLogo() {
