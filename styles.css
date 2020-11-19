@@ -53,8 +53,8 @@ body {
 #logo {
     margin-top: 6rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
     color: forestgreen;
     font-size: 150px;
     height: fit-content;
@@ -76,21 +76,33 @@ span {
     float: right;
 }
 
-img{
-    float: right;
-    width: 100%;
-    max-height: 100%;
-    display: block;
-}
 
 #plates {
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;    
     font-size: 50px;
     border-width: 3px;
-    border-style: solid;
     width: 500px;
     height: 5em;
 }
+
+#plates > div {
+    border-style: double;
+    background-color: forestgreen;
+}
+#plates > div:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+#plates > div:hover > 
+    img { display: block; }
+
+img {
+    width: 100%;
+    max-height: 45vh;
+    display: none;
+}
+
 
 header {
     font-size: 48pt;
@@ -111,7 +123,6 @@ table {
     border-color: forestgreen;
     border-style: ridge;
     width: 600px;
-
 }
 
 th {
