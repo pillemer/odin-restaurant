@@ -3,16 +3,16 @@
     src: url(kindnrich.otf);
 }
 @font-face {
-    font-family: goldman;
-    src: url(Goldman-Regular.ttf);
+    font-family: amatic;
+    src: url(AmaticSC-Regular.ttf);
 }
 html {
     height: 100%;
 }
 
 body {
-    font-family: goldman;
-    background-image: linear-gradient(180deg, rgb(25, 85, 20) 0%,  black 100%);
+    font-family: amatic;
+    background-image: linear-gradient(180deg, rgb(227, 231, 226) 0%,  rgb(197, 197, 197) 60%,  rgb(227, 231, 226) 100%);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -24,15 +24,16 @@ body {
     height: 100%;
     width: 100%;
     min-width: 550px;
+    color: rgb(50, 51, 51);
     grid-template-rows: 1fr 2fr 3fr 500px;
     width: auto;
 }
 
 #navigation {
     display: grid;
-    background-color:black;
+    background-color:transparent;
     grid-template-columns: repeat(4, 1fr);
-    border-style: solid;
+    border-style: none;
     column-gap: 3px;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
@@ -40,11 +41,12 @@ body {
 }
 
 #navigation > button {
-    font-family: kindnrich;
+    font-family: amatic;
     height: 50px;
     width: 100%;
     border-width: 0em;
-    background-color: goldenrod;
+    color: rgb(50, 51, 51);
+    background-color: rgb(142, 203, 231);
     font-size: xx-large;
     filter: brightness(1);
 }
@@ -52,8 +54,8 @@ body {
 #navigation > button:hover {
     cursor: pointer;
     filter: brightness(0.9);
-}
 
+}
 
 #logo {
     font-family: kindnrich;
@@ -61,15 +63,12 @@ body {
     display: flex;
     margin-right: auto;
     margin-left: auto;
-    color: forestgreen;
+    color: rgb(46, 137, 179);
     font-size: 150px;
     height: fit-content;
 }
 
 #blurb {
-    background: -webkit-linear-gradient(rgb(25, 85, 20), rgb(168, 168, 168));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -88,27 +87,36 @@ span {
     margin-left: auto;
     margin-right: auto;    
     font-size: 25px;
-    border-width: 3px;
     width: 550px;
     height: 5em;
 }
 
 #plates > div {
-    border-style: double;
-    background-color: forestgreen;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color:rgb(139, 193, 218);
+    border-radius: 15px;
 }
+
 #plates > div:hover {
-    background-color: lightyellow;
+    background-color: rgb(248, 248, 223);
     cursor: pointer;
 }
-#plates > div:hover > 
-    img { display: block; }
 
 img {
     width: 100%;
     max-height: 45vh;
+    border-radius: 15px;
+    padding-bottom: 10px;
     display: none;
 }
+
+#plates > div:hover > 
+img {   
+     display: block;
+}
+
 
 header {
     font-size: 25px;
@@ -117,7 +125,7 @@ header {
 }
 
 #OpeningTimes {
-    color:  rgb(168, 168, 168);
+    color:  rgb(54, 53, 53);
     font-size: 25px;
     text-align: center;
 }
@@ -127,17 +135,17 @@ table {
     font-size: 28pt;
     margin-left: auto;
     margin-right: auto;
-    border-color: forestgreen;
-    border-style: ridge;
+    background-color: rgb(139, 193, 218);
+    border-style: none;
+    border-radius: 15px;
     width: 600px;
 }
 
-th {
-    color: forestgreen;
+#contactTitle {
+    font-weight: 700;
 }
 
 address {
-    color:  rgb(168, 168, 168);
     font-size: 25px;
     padding-top: 3rem;
     margin-right: auto;
