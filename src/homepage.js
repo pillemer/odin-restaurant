@@ -7,10 +7,10 @@ function homepage() {
     const content = document.querySelector('#content');
     content.innerHTML = '';
     navbarAndLogo();
-    const blurbText = 'Here at P>S we take pride in the art of (Food Presentation). Each dish is not only delicious and cooked to perfection, but is also a feast for the eyes and the hearts of art lovers everythwere.'
+    const blurbText = 'Here at P&S we take pride in the art of Food Presentation. Each dish is not only delicious and cooked to perfection, but is also a feast for the eyes and the hearts of art lovers.'
     const blurbDiv = document.createElement('div');
     blurbDiv.id = 'blurb';
-    blurbDiv.textContent = blurbText;
+    blurbDiv.innerHTML = blurbText;
     content.appendChild(blurbDiv)
 }
 
