@@ -48,7 +48,7 @@ function contact () {
     // contact header
     const contactLogo = document.createElement('header');
     contactLogo.id = 'contactTitle';
-    contactLogo.textContent = 'CONTACT';
+    contactLogo.textContent = 'Opening Hours';
     content.appendChild(contactLogo);
     // opening hours table 
     const openHours = createTable();

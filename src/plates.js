@@ -15,14 +15,11 @@ function plates() {
         const plateDiv = document.createElement('div');
         const price = plateLibrary[i].price;
         plateDiv.id = plateLibrary[i].name;
-        plateDiv.innerHTML = `${plateLibrary[i].description}. <span>${price} </span>`;
+        plateDiv.innerHTML = `${plateLibrary[i].description} <span>${price} </span>`;
         const img = document.createElement('img');
         img.src = plateLibrary[i].src
-        img.id = 'img'+plateLibrary[i].name;
+        img.id = 'img '+plateLibrary[i].name;
         plateDiv.appendChild(img);
-        plateDiv.addEventListener('hover', () => {
-            img.style.display = 'block';
-        })
         plates.appendChild(plateDiv);
     }
     content.appendChild(plates);}
