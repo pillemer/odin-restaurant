@@ -1,2 +1,5 @@
 # odin-restaurant
-Restaurant project for The Odin Prject coursework
+Restaurant page for The Odin Project coursework
+
+## Built with:
+webpack
