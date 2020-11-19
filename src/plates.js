@@ -18,7 +18,11 @@ function plates() {
         plateDiv.innerHTML = `${plateLibrary[i].description}. <span>${price} </span>`;
         const img = document.createElement('img');
         img.src = plateLibrary[i].src
+        img.id = 'img'+plateLibrary[i].name;
         plateDiv.appendChild(img);
+        plateDiv.addEventListener('hover', () => {
+            img.style.display = 'block';
+        })
         plates.appendChild(plateDiv);
     }
     content.appendChild(plates);}
@@ -36,10 +40,10 @@ function populatePlates(array) {
     const dishes = [
         ['Bloody Mary', 'Mayhem in a cup', '$10,55', './img/bloodyMary.jpg'],
         ['Egg in a Trophy', 'A winner\'s breakfast', '$14.99', './img/eggCup.jpg'],
-        ['Faucet', 'Everything and the kitchen sink', '$22.37', './img/faucet.jpg'],
+        ['Faucet', 'Everything, and the kitchen sink', '$22.37', './img/faucet.jpg'],
         ['Digital Pasta', 'Eating in the 22nd century', '$945', './img/ipad.jpg'],
-        ['The Mess', 'You got to see it to believe it', '$4.03', './img/oliveCup.jpg'],
-        ['Raviolo on the Line', 'You won\'t be left out to dry', '$31.95', './img/ravioli.jpg'],
+        ['The Mess', 'You have to see it to believe it', '$4.03', './img/oliveCup.jpg'],
+        ['Raviolo on the Line', 'Left out to dry', '$31.95', './img/ravioli.jpg'],
         ['Dig In!', 'Traditional Full English breakfast', '$6.00', './img/shovelEggs.jpg'],
     ]
     for (let i= 0; i<dishes.length; i++) {
