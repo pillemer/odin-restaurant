@@ -2,13 +2,17 @@
     font-family: kindnrich;
     src: url(kindnrich.otf);
 }
+@font-face {
+    font-family: goldman;
+    src: url(Goldman-Regular.ttf);
+}
 html {
     height: 100%;
 }
 
 body {
-    font-family: kindnrich;
-    background-image: linear-gradient(180deg, goldenrod 0%,  lightyellow 100%);
+    font-family: goldman;
+    background-image: linear-gradient(180deg, rgb(25, 85, 20) 0%,  black 100%);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -51,6 +55,7 @@ body {
 
 
 #logo {
+    font-family: kindnrich;
     margin-top: 6rem;
     display: flex;
     margin-right: auto;
@@ -61,14 +66,15 @@ body {
 }
 
 #blurb {
+    background: -webkit-linear-gradient(rgb(25, 85, 20), rgb(168, 168, 168));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
-    /* text-align: justify;
-    text-justify: inter-word; */
     font-size: 60px;
 }
 
@@ -80,9 +86,9 @@ span {
 #plates {
     margin-left: auto;
     margin-right: auto;    
-    font-size: 50px;
+    font-size: 25px;
     border-width: 3px;
-    width: 500px;
+    width: 550px;
     height: 5em;
 }
 
@@ -103,15 +109,15 @@ img {
     display: none;
 }
 
-
 header {
-    font-size: 48pt;
+    font-size: 25px;
     text-align: center;
     font-weight: 550;
 }
 
 #OpeningTimes {
-    font-size: 48pt;
+    color:  rgb(168, 168, 168);
+    font-size: 25px;
     text-align: center;
 }
 
@@ -130,7 +136,8 @@ th {
 }
 
 address {
-    font-size: 38pt;
+    color:  rgb(168, 168, 168);
+    font-size: 25px;
     padding-top: 3rem;
     margin-right: auto;
     margin-left: auto;
